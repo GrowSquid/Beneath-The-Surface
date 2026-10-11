@@ -1,0 +1,129 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title> Past Dwellers</title>
+<style>
+    body {
+        margin: 0;
+        background: #1b140c;
+        color: #f0c46c;
+        font: 17px/1.7 monospace;
+        text-align: center;
+    }
+    #text { font-size: 1.6rem; }
+    button { font-size: 1.4rem; margin: 1rem 0; }
+    button::before { content: "> "; color: #a08040; }
+    button:hover { background: #35260f; color: #ffe5a8; }
+</style>
+
+<body>
+
+<main>
+<h1 id="title"></h1>
+<div id="text"></div>
+<ul id="options"></ul>
+
+</main>
+
+<script>
+const GUIDE = {
+    title: "Past Dwellers",
+    scenes: {
+        
+        start:{
+            text: 'Welcome to the Past Dwellers guide provides additional assistance. Which area are you in?',
+            options: [
+        { label: "Beginning Wasteland", goto: "waste" },
+        { label: "Underground Dungeon", goto: "fights" },
+        { label: "King's Lair", goto: "final" },
+            ],
+        },
+
+
+
+        waste: {
+            text: 'This is the first area of the game, use the arrow keys to move. Have you spoken to Rivian?',
+            options: [
+                { label: "Yes", goto: "waste_yes" },
+                { label: "No", goto: "waste_no" },
+                { label: "Back to the start", goto: "start" },
+            ],
+        },
+
+        waste_yes: {
+            text: 'An entrance to the dungeon has opened, walk to it to proceed!',
+            options: [
+            { label: "Back to the start", goto: "start" },
+            ],
+        },
+
+        waste_no: {
+            text: 'Move towards Rivian and use the Enter key to progress through dialogue',
+            options: [
+            { label: "Back to Beginning Wasteland", goto: "waste" },
+            { label: "Back to the start", goto: "start" },
+            ],
+        },
+
+        fights: {
+            text: 'This is where the Rat King stores his minions. Which enemy are you fighting?',
+            options: [
+                { label: "Rodent", goto: "rat" },
+                { label: "Viper", goto: "snake" },
+                { label: "Back to the start", goto: "start" },
+            ],
+        },
+
+        rat: {
+            text: 'Use the Rolling Axe as the Rodent is immune to regular attacks',
+            options: [
+            { label: "Back to Underground Dungeon", goto: "waste" },
+            { label: "Back to the start", goto: "start" },
+            ],
+        },
+
+        snake: {
+            text: 'Use Sword Cut with Rivian in your party. Heal when necessary',
+            options: [
+            { label: "Back to Underground Dungeon", goto: "waste" },
+            { label: "Back to the start", goto: "start" },
+            ],
+        },
+        
+        final: {
+            text: 'The Final Boss Fight; Collect the healing items before entering',
+            options: [
+                { label: "Final Boss Help", goto: "bruh" },
+                { label: "Back to the start", goto: "start" },
+            ],
+        },
+
+        bruh: {
+            text: 'Use all party members; Rat King has high defense, so play conservatively',
+            options: [
+                { label: "Back to Underground Dungeon", goto: "final" },
+                { label: "Back to the start", goto: "start" },
+            ],
+        },
+    }
+}
+// Engine, it IS AI GENERATED SORRY :( 
+function show(id) {
+  const scene = GUIDE.scenes[id];
+  document.getElementById("text").textContent = scene.text.trim();
+  const list = document.getElementById("options");
+  list.innerHTML = "";
+  scene.options.forEach(function (opt) {
+    const li = document.createElement("li");
+    const button = document.createElement("button");
+    button.textContent = opt.label;
+    button.onclick = function () { show(opt.goto); };
+    li.append(button);
+    list.append(li);
+  });
+}
+ 
+document.getElementById("title").textContent = GUIDE.title;
+document.title = GUIDE.title;
+show("start");
+
+</script>
