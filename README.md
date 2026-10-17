@@ -15,9 +15,9 @@ Run the Version 2.0 executable of the game,
 this will create a folder containing the game, and its source code
 
 Optional but prefered:
-Download the website, stopwatch and guide files
-Open the website before playing the game
-If you need help or are stuck in the game, use the interactive guide
+Download the website, stopwatch and guide files  
+Open the website before playing the game  
+If you need help or are stuck in the game, use the interactive guide  
 Use the stopwatch for speedrunning and tell me your score!
 
 ## Requirements
