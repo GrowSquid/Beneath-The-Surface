@@ -8,7 +8,15 @@ Beneath the Surface was the original theme and work-in-progress name of the game
 Past Dwellers is the current name [also my idea -_-]
 
 I have created a simple website to introduce the game;  
-as well as an interactive spoiler-free guide for the game, made in HTML.
+as well as an interactive spoiler-free guide for the game, made in HTML.  
+
+## Requirements
+You may need to download the Runtime Package of the engine to run the game  
+I have included the RTP as an executable  
+If you don't trust the file; you can also download it straight from the source:
+
+https://www.rpgmakerweb.com/run-time-package  
+Select RPG Maker XP
 
 ## Instructions
 If not already installed, extract the Runtime Package for RPG Maker  
@@ -20,14 +28,6 @@ Download the website, stopwatch and guide files
 Open the website before playing the game  
 If you need help or are stuck in the game, use the interactive guide  
 Use the stopwatch for speedrunning and tell me your score!
-
-## Requirements
-You may need to download the Runtime Package of the engine to run the game  
-I have included the RTP as an executable  
-If you don't trust the file; you can also download it straight from the source:
-
-https://www.rpgmakerweb.com/run-time-package  
-Select RPG Maker XP
 
 ## Controls
 Alt + Enter = fullscreen to make game go biiiiig  
